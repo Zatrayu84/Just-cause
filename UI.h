@@ -9,7 +9,7 @@ class UI {
 public:
     void ClearConsole();
 
-    static std::string PromptUser(const std::string &primeText, const std::string &promptText);
+    static PromptUser(const std::string &primeText, const std::string &promptText);
 
     // Showtext is going to be my dialogue area
     void ShowText(const std::string &message);

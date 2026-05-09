@@ -39,7 +39,7 @@ void UI::ShowText(const std::string &message) {
     std::cin.get();
 }
 
-static std::string  UI::PromptUser(const std::string &primeText, const std::string &promptText) {
+static  UI::PromptUser(const std::string &primeText, const std::string &promptText) {
     ClearConsole();
 
     //Added placeholder for results
