@@ -39,7 +39,7 @@ void UI::ShowText(const std::string &message) {
     std::cin.get();
 }
 
-static  UI::PromptUser(const std::string &primeText, const std::string &promptText) {
+std::string UI::PromptUser(const std::string &primeText, const std::string &promptText) {
     ClearConsole();
 
     //Added placeholder for results
@@ -57,7 +57,7 @@ static  UI::PromptUser(const std::string &primeText, const std::string &promptTe
     return result;
 }
 
-std::vector<std::string> UI::DisplayMenu(const std::vector<std::string>& yourChoices, const std::string& promptText){
+void UI::DisplayMenu(const std::vector<std::string>& yourChoices, const std::string& promptText){
     ClearConsole();
 
     //this is where I need to store my choices for menu - this is already declared in my .h 

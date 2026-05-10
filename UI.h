@@ -9,13 +9,13 @@ class UI {
 public:
     void ClearConsole();
 
-    static PromptUser(const std::string &primeText, const std::string &promptText);
+    std::string PromptUser(const std::string &primeText, const std::string &promptText);
 
     // Showtext is going to be my dialogue area
     void ShowText(const std::string &message);
 
     // Display menu is my choices area
-    std::vector<std::string> DisplayMenu(const std::vector<std::string> &yourChoices, const std::string &promptText);
+    void DisplayMenu(const std::vector<std::string> &yourChoices, const std::string &promptText);
 
 private:
     //Variables
