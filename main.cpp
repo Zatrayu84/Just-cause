@@ -17,6 +17,8 @@ int main() {
     std::vector<std::string> playerChoice = {};
     gameUI.DisplayMenu({"Good", "Bad", "I want to go home!"},
                                                "This will decide your fate. How do you feel?");
+
+
 }
 
     // this is where I am going to display my menu

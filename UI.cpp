@@ -32,7 +32,7 @@ void UI::ShowSpeech(const std::string &message) {
         std::this_thread::sleep_for(std::chrono::milliseconds(45));
     }
     std::cout << std::endl;
-
+    
     std::cout << "\n" << divider << "\n" << std::endl;
 
     std::cout << "Press \"enter\" to continue........" << std::endl;
