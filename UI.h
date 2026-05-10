@@ -7,15 +7,15 @@
 
 class UI {
 public:
-    void ClearConsole();
+    static void ClearConsole();
 
-    std::string PromptUser(const std::string &primeText, const std::string &promptText);
+    static std::string PromptUser(const std::string &primeText, const std::string &promptText);
 
     // Showtext is going to be my dialogue area
-    void ShowText(const std::string &message);
+    void ShowSpeech(const std::string &message);
 
     // Display menu is my choices area
-    void DisplayMenu(const std::vector<std::string> &yourChoices, const std::string &promptText);
+    std::vector<std::string>  DisplayMenu(const std::vector<std::string> &yourChoices, const std::string &promptText);
 
 private:
     //Variables

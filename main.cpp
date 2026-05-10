@@ -6,21 +6,17 @@
 int main() {
     UI gameUI;
     //introduction
-    gameUI.ShowText("Welcome to the world of Shrilas!");
-    gameUI.ShowText("An older man approaches you and speaks in a low gravely voice...");
-    gameUI.ShowText("I am timand, what brings you here stranger?, Have you a name?");
+    gameUI.ShowSpeech("Welcome to the world of Shrilas!");
+    gameUI.ShowSpeech("An older man approaches you and speaks in a low gravely voice...");
+    gameUI.ShowSpeech("I am timand, what brings you here stranger?, Have you a name?");
 
     std::string playerName = gameUI.PromptUser("Input your name here.", "Name: ");
-    gameUI.ShowText("Greetings " + playerName + "! Welcome!");
-    gameUI.ShowText("The look on your face shows you to be....");
+    gameUI.ShowSpeech("Greetings " + playerName + "! Welcome!");
+    gameUI.ShowSpeech("The look on your face shows you to be....");
 
-    std::vector<std::string> playerChoice = gameUI.DisplayMenu({"Good", "Bad", "I want to go home!"},
-        "This will decide your fate. How do you feel?");
-
-
-
-
-
+    std::vector<std::string> playerChoice = {};
+    gameUI.DisplayMenu({"Good", "Bad", "I want to go home!"},
+                                               "This will decide your fate. How do you feel?");
 }
 
     // this is where I am going to display my menu

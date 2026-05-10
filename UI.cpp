@@ -15,7 +15,7 @@ void UI::ClearConsole() {
     std::cout << "\x1B[2J\x1B[H";
 }
 
-void UI::ShowText(const std::string &message) {
+void UI::ShowSpeech(const std::string &message) {
     ClearConsole();
 
     const std::string divider = "<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>";
@@ -57,7 +57,7 @@ std::string UI::PromptUser(const std::string &primeText, const std::string &prom
     return result;
 }
 
-void UI::DisplayMenu(const std::vector<std::string>& yourChoices, const std::string& promptText){
+std::vector<std::string> UI::DisplayMenu(const std::vector<std::string>& yourChoices, const std::string& promptText){
     ClearConsole();
 
     //this is where I need to store my choices for menu - this is already declared in my .h 
@@ -65,7 +65,23 @@ void UI::DisplayMenu(const std::vector<std::string>& yourChoices, const std::str
     for ( int i = 0; i < currentChoices.size(); ++ i) {
         std::cout << "[" << (i + 1) << "] " << currentChoices[i] << std::endl;
     }
-    std::cout << "\n" << promptText << std::endl;
+    std::cout << "\n" << promptText + ": ";
+    std::string myChoice;
+    getline(std::cin, myChoice);
+
+    if (myChoice == "1") {
+        std::cout << "I am good!" << std::endl;
+        std::cout << "Then let us have a little adventure shall we?" << "\n" << std::endl;
+    }
+    else if (myChoice == "2") {
+        std::cout << "I am bad!" << std::endl;
+        std::cout << "Then let us have a little adventure shall we?" << "\n" << std::endl;
+    }
+    else if (myChoice == "3") {
+        std::cout << "Don't waste my time then, go home!" << std::endl;
+    }
+
+    return yourChoices;
 }
 
 
