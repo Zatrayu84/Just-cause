@@ -8,9 +8,9 @@ int main() {
     //introduction
     gameUI.ShowSpeech("Welcome to the world of Shrilas!");
     gameUI.ShowSpeech("An older man approaches you and speaks in a low gravely voice...");
-    gameUI.ShowSpeech("I am timand, what brings you here stranger?, Have you a name?");
+    gameUI.ShowSpeech("I am Timand, what brings you here stranger?, Have you a name?");
 
-    std::string playerName = gameUI.PromptUser("Input your name here.", "Name: ");
+    std::string playerName = gameUI.PromptUser("Input your name here.", "Name ");
     gameUI.ShowSpeech("Greetings " + playerName + "! Welcome!");
     gameUI.ShowSpeech("The look on your face shows you to be....");
 
