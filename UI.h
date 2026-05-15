@@ -11,7 +11,7 @@ public:
 
     static std::string PromptUser(const std::string &primeText, const std::string &promptText);
 
-    // Showtext is going to be my dialogue area
+    // ShowSpeech is going to be my dialogue area
     void ShowSpeech(const std::string &message);
 
     // Display menu is my choices area

@@ -14,10 +14,52 @@ int main() {
     gameUI.ShowSpeech("Greetings " + playerName + "! Welcome!");
     gameUI.ShowSpeech("The look on your face shows you to be....");
 
-    std::vector<std::string> playerChoice = {};
-    gameUI.DisplayMenu({"Good", "Bad", "I want to go home!"},
-                                               "This will decide your fate. How do you feel?");
 
+
+    int playerChoice = 0;
+    // While loop for menu creation and for Input Validation
+    // while true{false;}
+
+    while (playerChoice != 1 && playerChoice != 2 && playerChoice != 3) {
+
+        gameUI.DisplayMenu({ "Good", "Bad", "I want to go home!" },
+            "This will decide your fate. How do you feel?");
+        
+        //get input from player
+       std::cin >> playerChoice;
+
+        switch (playerChoice) {
+            case 1:
+                UI::ClearConsole();
+                std::cout << "I am good!" << std::endl;
+                std::cout << "Then let us have a little adventure shall we?" << "\n" << std::endl;
+                break;
+            case 2:
+                UI::ClearConsole();
+                std::cout << "I am bad!" << std::endl;
+                std::cout << "Then let us have a little adventure shall we?" << "\n" << std::endl;
+                break;
+            case 3:
+                UI::ClearConsole();
+                std::cout << "Don't waste my time then, go home!" << std::endl;
+                break;
+            case 4:
+                UI::ClearConsole();
+                std::cout << "Exit" << std::endl;
+                return 0;
+            default:
+                UI::ClearConsole();
+                std::cout << "Make a valid choice - didn't work..." << std::endl;
+        }
+    }
+
+    // this is it where I stop for the night, finally got something going again. Well closer!
+
+    gameUI.DisplayMenu({ "Away from here, and fast.", "To the end fo the world.", "Under a rock!" },
+        "Where do we go now?");
+
+    int newChoice;
+    std::cin >> newChoice;
 
 }
 

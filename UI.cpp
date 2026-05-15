@@ -56,7 +56,9 @@ std::string UI::PromptUser(const std::string &primeText, const std::string &prom
 
     return result;
 }
-
+    // Here I am creating my function to manage menu ceration,
+    // Simple creation of 3 choices passed throuhg teh *yourChoices* 
+    // Then selecetion prompt would be *promptText*
 std::vector<std::string> UI::DisplayMenu(const std::vector<std::string>& yourChoices, const std::string& promptText){
     ClearConsole();
 
@@ -66,10 +68,13 @@ std::vector<std::string> UI::DisplayMenu(const std::vector<std::string>& yourCho
         std::cout << "[" << (i + 1) << "] " << currentChoices[i] << std::endl;
     }
     std::cout << "\n" << promptText + ": ";
-    std::string myChoice;
-    getline(std::cin, myChoice);
+    
+    
+    /*std::string myChoice;
+    getline(std::cin, myChoice);*/
 
-    if (myChoice == "1") {
+
+    /*if (myChoice == "1") {
         std::cout << "I am good!" << std::endl;
         std::cout << "Then let us have a little adventure shall we?" << "\n" << std::endl;
     }
@@ -79,7 +84,7 @@ std::vector<std::string> UI::DisplayMenu(const std::vector<std::string>& yourCho
     }
     else if (myChoice == "3") {
         std::cout << "Don't waste my time then, go home!" << std::endl;
-    }
+    }*/
 
     return yourChoices;
 }
