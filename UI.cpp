@@ -69,45 +69,5 @@ std::vector<std::string> UI::DisplayMenu(const std::vector<std::string>& yourCho
     }
     std::cout << "\n" << promptText + ": ";
     
-    
-    /*std::string myChoice;
-    getline(std::cin, myChoice);*/
-
-
-    /*if (myChoice == "1") {
-        std::cout << "I am good!" << std::endl;
-        std::cout << "Then let us have a little adventure shall we?" << "\n" << std::endl;
-    }
-    else if (myChoice == "2") {
-        std::cout << "I am bad!" << std::endl;
-        std::cout << "Then let us have a little adventure shall we?" << "\n" << std::endl;
-    }
-    else if (myChoice == "3") {
-        std::cout << "Don't waste my time then, go home!" << std::endl;
-    }*/
-
     return yourChoices;
 }
-
-
-/*void UI::DisplayMenu() {
-    ClearConsole();
-
-    std::cout << "[1] Good" << std::endl;
-    std::cout << "[2] Bad" << std::endl;
-    std::cout << "[3] I Want to go home" << std::endl;
-
-    std::cout << "Enter your choice: ";
-    std::string choiceMade;
-    std::cin >> choiceMade;
-
-    if (choiceMade == "1") {
-        std::cout << "I am good!" << std::endl;
-        std::cout << "Then let us have a little adventure shall we?" << "\n" << std::endl;
-    } else if (choiceMade == "2") {
-        std::cout << "I am bad!" << std::endl;
-        std::cout << "Then let us have a little adventure shall we?" << "\n" << std::endl;
-    } else if (choiceMade == "3") {
-        std::cout << "Don't waste my time, then go home!" << std::endl;
-    }
-}*/
